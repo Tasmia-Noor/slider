@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="slider.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="slider">
+            <img src="./car1.jpg" alt="" class="img1">
+            <img src="./car2.jpg" alt="" class="img1">
+            <img src="./car3.jpg" alt="" class="img1">
+            <img src="./car4.jpg" alt="" class="img1">
+            <img src="./car5.jpg" alt="" class="img1">
+            <img src="./car6.jpg" alt="" class="img1">
+            <img src="./car7.jpg" alt="" class="img1">
+            <img src="./car8.jpg" alt="" class="img1">
+        </div>
+    </div>
+    <button class="btn1"></button>
+    <button class="btn1"></button>
+    <button class="btn1"></button>
+    <button class="btn1"></button>
+    <button class="btn1"></button>
+    <button class="btn1"></button>
+    <button class="btn1"></button>
+    <button class="btn1"></button>
+</body>
+<script>
+
+    let x=0
+
+    const moveRight=()=>{
+        if(x<700){
+            x = x+100
+            console.log(x);
+        $('.slider').animate({
+            left: `${-x}%`
+        }, 1000)
+    }
+    else if(x == 700){
+        x = -100
+    }
+    }
+
+    setInterval(moveRight, 2000)
+
+    $('.btn1').eq(0).click(function(){
+        $('.slider').animate({left:`0%`})
+        x = 0;
+        moveRight
+    })
+    $('.btn1').eq(1).click(function(){
+        $('.slider').animate({left:`-100%`})
+        x=100
+        moveRight
+    })
+    $('.btn1').eq(2).click(function(){
+        $('.slider').animate({left:`-200%`})
+        x=200
+        moveRight
+    })
+    $('.btn1').eq(3).click(function(){
+        $('.slider').animate({left:`-300%`})
+        x=300
+        moveRight
+    })
+    $('.btn1').eq(4).click(function(){
+        $('.slider').animate({left:`-400%`})
+        x=400
+        moveRight
+    })
+    $('.btn1').eq(5).click(function(){
+        $('.slider').animate({left:`-500%`})
+        x=500
+        moveRight
+    })
+    $('.btn1').eq(6).click(function(){
+        $('.slider').animate({left:`-600%`})
+        x=600
+        moveRight
+    })
+    $('.btn1').eq(7).click(function(){
+        $('.slider').animate({left:`-700%`})
+        x=700
+        moveRight
+    })
+    $('.btn1').eq(8).click(function(){
+        $('.slider').animate({left:`-800%`})
+        x=800
+        moveRight
+    })
+
+   
+
+</script>
+</html>
